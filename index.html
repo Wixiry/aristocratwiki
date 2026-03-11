@@ -3,24 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wiki Aristocrat</title>
+    <title>Wiki Knowledge Base</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="./style.css">
     <style>
-        /* Плавный вертикальный скролл для списка тем */
+        /* Принудительный скроллбар для навигации */
         .nav-scroll-area {
-            overflow-y: auto;
-            scrollbar-width: thin;
-            scrollbar-color: #3f3f46 transparent;
+            overflow-y: auto !important;
+            max-height: calc(100vh - 350px); /* Оставляем место под фото и поиск */
         }
-        .nav-scroll-area::-webkit-scrollbar {
-            width: 4px;
-        }
-        .nav-scroll-area::-webkit-scrollbar-thumb {
-            background-color: #3f3f46;
-            border-radius: 20px;
-        }
+        /* Кастомный вид скролла */
+        .nav-scroll-area::-webkit-scrollbar { width: 4px; }
+        .nav-scroll-area::-webkit-scrollbar-thumb { background: #3f3f46; border-radius: 10px; }
     </style>
 </head>
 <body class="bg-zinc-950 text-zinc-300 h-screen flex overflow-hidden font-sans">
@@ -33,15 +28,14 @@
             <img 
                 src="https://img.hugoinc.family/uploads/69b1c6fdb0af4_d3ad3542db75cebe.png" 
                 alt="Logo" 
-                class="w-full h-48 object-cover rounded-xl shadow-lg border border-zinc-700/50 transition-transform hover:scale-[1.02] duration-300"
-                onerror="this.style.display='none'"
+                class="w-full h-48 object-cover rounded-xl shadow-lg border border-zinc-800"
             >
         </div>
         
         <div class="p-4 border-b border-zinc-800">
             <div class="relative">
                 <i data-lucide="search" class="absolute left-3 top-2.5 h-4 w-4 text-zinc-500"></i>
-                <input type="text" id="search" placeholder="Поиск по разделам..." class="w-full bg-zinc-950 border border-zinc-700 rounded-lg pl-9 pr-4 py-2 text-sm focus:outline-none focus:border-blue-500/50 focus:ring-1 focus:ring-blue-500/50 text-zinc-200 transition-all">
+                <input type="text" id="search" placeholder="Поиск тем..." class="w-full bg-zinc-950 border border-zinc-700 rounded-lg pl-9 pr-4 py-2 text-sm focus:outline-none focus:border-blue-500/50 text-zinc-200">
             </div>
         </div>
         
@@ -49,18 +43,12 @@
             <nav id="nav-links" class="p-4 space-y-1">
                 </nav>
         </div>
-        
-        <div class="p-4 border-t border-zinc-800 text-[10px] text-zinc-600 uppercase tracking-widest text-center">
-            Database v1.0
-        </div>
     </aside>
 
-    <main class="flex-1 flex flex-col min-w-0 h-screen overflow-hidden relative">
-        <header class="md:hidden p-4 border-b border-zinc-800 flex items-center justify-between bg-zinc-900/80 backdrop-blur sticky top-0 z-10">
-            <button id="open-sidebar" class="text-zinc-400 hover:text-white">
-                <i data-lucide="menu"></i>
-            </button>
-            <img src="https://img.hugoinc.family/uploads/69b1c6fdb0af4_d3ad3542db75cebe.png" class="h-8 w-8 object-cover rounded-md">
+    <main class="flex-1 flex flex-col min-w-0 h-screen overflow-hidden">
+        <header class="md:hidden p-4 border-b border-zinc-800 flex items-center justify-between bg-zinc-900/80 backdrop-blur">
+            <button id="open-sidebar" class="text-zinc-400"><i data-lucide="menu"></i></button>
+            <span class="font-bold text-zinc-100">Database</span>
         </header>
 
         <div class="flex-1 overflow-y-auto custom-scrollbar">
@@ -73,9 +61,14 @@
 
     <script src="./script.js"></script>
     <script>
-        // Инициализация иконок
-        lucide.createIcons();
+        window.addEventListener('DOMContentLoaded', () => {
+            lucide.createIcons();
+            // Если темы все еще не видно, убедись, что в script.js есть массив articles
+            if (typeof renderNavigation === 'function') {
+                renderNavigation();
+                loadArticle();
+            }
+        });
     </script>
 </body>
 </html>
-
