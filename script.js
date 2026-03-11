@@ -35,7 +35,7 @@ const articles = [
             <span class="cyber-marker">—</span>
             <div class="cyber-content">
                 <span class="cyber-label">Участие в жизни города:</span>
-                <span class="cyber-desc">Вместе мы будем участвовать в рейдах и строить будущее Нью-Йорка.</span>
+                <span class="cyber-desc">Вместе мы будем участвовать в мероприятияхи строить будущее на Нью-Йорке.</span>
             </div>
         </div>
 
@@ -241,6 +241,7 @@ renderNavigation();
 loadArticle();
 
 lucide.createIcons();
+
 
 
 
