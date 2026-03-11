@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wiki base</title>
+    <title>Wiki ифыу</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="./style.css">
@@ -17,10 +17,11 @@
         <div class="p-5 border-b border-zinc-800 flex justify-between items-center">
             <h1 class="text-xl font-bold text-zinc-100 flex items-center gap-3">
                 <img 
-                    src="https://img.icons8.com/color/96/wikipedia.png" 
+                    src="https://img.hugoinc.family/uploads/69b1c6fdb0af4_d3ad3542db75cebe.png" 
                     alt="Logo" 
                     style="width: 32px; height: 32px;" 
-                    class="flex-shrink-0 object-fill"
+                    class="flex-shrink-0 object-fill rounded-sm"
+                    onerror="this.src='https://via.placeholder.com/32?text=?'"
                 >
                 <span class="tracking-tight">Wiki</span>
             </h1>
@@ -41,6 +42,7 @@
     </aside>
 
     <main class="flex-1 flex flex-col min-w-0 h-screen overflow-y-auto custom-scrollbar relative">
+        
         <header class="md:hidden p-4 border-b border-zinc-800 flex items-center bg-zinc-900/80 backdrop-blur sticky top-0 z-10">
             <button id="open-sidebar" class="text-zinc-400 hover:text-white mr-4">
                 <i data-lucide="menu"></i>
@@ -49,7 +51,7 @@
             <img 
                 src="https://img.hugoinc.family/uploads/69b1c6fdb0af4_d3ad3542db75cebe.png" 
                 style="width: 24px; height: 24px;" 
-                class="mr-3 object-fill"
+                class="mr-3 object-fill rounded-sm"
             >
             <span class="text-lg font-semibold text-zinc-100">Wiki</span>
         </header>
