@@ -226,11 +226,59 @@ body {
     color: var(--text-primary);
 }
 
+/* Контейнер для списка внутри кибер-блока */
+.cyber-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; /* Расстояние между пунктами */
+    margin: 1rem 0;
+}
+
+/* Строка одного пункта */
+.cyber-item {
+    display: flex;
+    align-items: flex-start; /* Выравнивание по верхней линии текста */
+    gap: 15px;
+}
+
+/* Стилизация тире (Маркера) */
+.cyber-marker {
+    color: var(--accent-blue);
+    font-weight: bold;
+    flex-shrink: 0;
+    margin-top: 2px; /* Микро-смещение для идеального центра с первой строкой */
+}
+
+/* Контентная часть (Заголовок + Текст) */
+.cyber-content {
+    display: flex;
+    flex-direction: column; /* Заголовок над текстом */
+    gap: 4px;
+}
+
+/* Заголовок пункта (Синий, капсом) */
+.cyber-label {
+    color: var(--accent-blue);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Основной текст пункта */
+.cyber-desc {
+    color: var(--text-primary);
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
 /* Специальный градиентный текст */
 .wiki-title-gradient {
     background: linear-gradient(135deg, #ffffff 0%, #a1a1aa 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
 
 
