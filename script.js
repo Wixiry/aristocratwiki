@@ -1,5 +1,3 @@
-// --- БАЗА ДАННЫХ СТАТЕЙ ---
-// Добавляйте новые объекты сюда. Поддерживается HTML-разметка.
 const articles = [
     {
         id: 'faq',
@@ -36,8 +34,6 @@ const articles = [
     }
 ];
 
-// --- ЛОГИКА ПРИЛОЖЕНИЯ ---
-
 const DOM = {
     navLinks: document.getElementById('nav-links'),
     contentArea: document.getElementById('content-area'),
@@ -48,7 +44,6 @@ const DOM = {
     overlay: document.getElementById('overlay')
 };
 
-// Рендер бокового меню (с учетом поиска)
 function renderNavigation(filterText = '') {
     DOM.navLinks.innerHTML = '';
     const query = filterText.toLowerCase();
@@ -72,22 +67,19 @@ function renderNavigation(filterText = '') {
     updateActiveLink();
 }
 
-// Загрузка контента
+
 function loadArticle() {
-    // Берем ID из URL (всё после #), если пусто — грузим первую статью
     const hashId = window.location.hash.replace('#', '') || articles[0].id;
     const article = articles.find(a => a.id === hashId) || articles[0];
 
-    // Рендерим HTML
+
     DOM.contentArea.innerHTML = article.content;
     
-    // Сбрасываем скролл наверх
     document.querySelector('main').scrollTop = 0;
     
     updateActiveLink(hashId);
 }
 
-// Подсветка активной ссылки
 function updateActiveLink(activeId = window.location.hash.replace('#', '') || articles[0].id) {
     document.querySelectorAll('.nav-item').forEach(link => {
         if (link.getAttribute('data-id') === activeId) {
@@ -100,21 +92,22 @@ function updateActiveLink(activeId = window.location.hash.replace('#', '') || ar
     });
 }
 
-// Мобильное меню
+
 const openMobileMenu = () => { DOM.sidebar.classList.remove('-translate-x-full'); DOM.overlay.classList.remove('hidden'); };
 const closeMobileMenu = () => { DOM.sidebar.classList.add('-translate-x-full'); DOM.overlay.classList.add('hidden'); };
 
-// Слушатели событий
+
 window.addEventListener('hashchange', loadArticle);
 DOM.searchInput.addEventListener('input', (e) => renderNavigation(e.target.value));
 DOM.openBtn.addEventListener('click', openMobileMenu);
 DOM.closeBtn.addEventListener('click', closeMobileMenu);
 DOM.overlay.addEventListener('click', closeMobileMenu);
 
-// Инициализация
+
 renderNavigation();
 loadArticle();
 
-lucide.createIcons(); // Рисуем SVG-иконки
+lucide.createIcons();
+
 
 
