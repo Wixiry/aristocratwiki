@@ -39,9 +39,35 @@ body {
 .wiki-content p { margin-bottom: 1.25rem; }
 
 /* Списки */
-.wiki-content ul { margin: 1rem 0; padding-left: 1.5rem; }
-.wiki-content li { position: relative; margin-bottom: 0.5rem; }
-.wiki-content li::before { content: "—"; position: absolute; left: -1.25rem; color: var(--accent-blue); }
+/* ==========================================================================
+   ИСПРАВЛЕННЫЕ СПИСКИ (ВЫРАВНИВАНИЕ ПО ЦЕНТРУ СТРОКИ)
+   ========================================================================== */
+
+.wiki-content ul {
+    margin: 1.5rem 0;
+    padding: 0;
+    list-style: none; /* Убираем стандартные точки */
+}
+
+.wiki-content li {
+    display: flex; /* Включаем flex для идеального выравнивания */
+    align-items: flex-start; /* Привязка к верху первой строки */
+    gap: 12px; /* Расстояние от тире до текста */
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
+}
+
+.wiki-content li::before {
+    content: "—";
+    color: var(--accent-blue);
+    font-weight: bold;
+    display: inline-block;
+    flex-shrink: 0; /* Чтобы тире не сжималось */
+    
+    /* Тонкая настройка: если тире все еще кажется "ниже", 
+       можно поднять его через transform */
+    transform: translateY(0px); 
+}
 
 /* ==========================================================================
    КОЛЛЕКЦИЯ БЛОКОВ С ЭФФЕКТОМ ВОЛНЫ И ЧЕТКИМ ТЕКСТОМ
@@ -195,6 +221,10 @@ body {
     margin-bottom: 0.5rem;
 }
 
+/* Если ты используешь блоки со списками как на референсе */
+.wiki-block-cyber ul li {
+    color: var(--text-primary);
+}
 
 /* Специальный градиентный текст */
 .wiki-title-gradient {
@@ -202,4 +232,5 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
 
