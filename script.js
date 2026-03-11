@@ -13,12 +13,33 @@ const articles = [
             <h2>Почему стоит выбрать нас?</h2>
             <p>Мы предлагаем не просто вступить в семью, а стать частью команды, которая помогает новичкам найти свой путь на сервере. Вот что ты получишь:</p>
 <div class="wiki-block-cyber">
-    <ul>
-        <li><strong>Поддержка 24/7:</strong> Мы всегда на связи и готовы ответить на твои вопросы по механике госструктур.</li>
-        <li><strong>Карьерный рост:</strong> Поможем устроиться на работу, подскажем, как продвигаться по службе.</li>
-        <li><strong>Участие в жизни города:</strong> Вместе мы будем участвовать в рейдах и мероприятиях.</li>
-        <li><strong>Дружеское комьюнити:</strong> У нас нет места токсичности.</li>
-    </ul>
+    <div class="cyber-list">
+        
+        <div class="cyber-item">
+            <span class="cyber-marker">—</span>
+            <div class="cyber-content">
+                <span class="cyber-label">Поддержка 24/7:</span>
+                <span class="cyber-desc">Мы всегда на связи и готовы ответить на твои вопросы по механике госструктур.</span>
+            </div>
+        </div>
+
+        <div class="cyber-item">
+            <span class="cyber-marker">—</span>
+            <div class="cyber-content">
+                <span class="cyber-label">Карьерный рост:</span>
+                <span class="cyber-desc">Поможем устроиться на работу, подскажем, как продвигаться по службе.</span>
+            </div>
+        </div>
+
+        <div class="cyber-item">
+            <span class="cyber-marker">—</span>
+            <div class="cyber-content">
+                <span class="cyber-label">Участие в жизни города:</span>
+                <span class="cyber-desc">Вместе мы будем участвовать в рейдах и строить будущее Нью-Йорка.</span>
+            </div>
+        </div>
+
+    </div>
 </div>
             
             <h2>Это твой шанс!</h2>
@@ -116,6 +137,7 @@ renderNavigation();
 loadArticle();
 
 lucide.createIcons();
+
 
 
 
