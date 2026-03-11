@@ -2,48 +2,25 @@
 // Добавляйте новые объекты сюда. Поддерживается HTML-разметка.
 const articles = [
     {
-        id: 'getting-started',
-        title: 'Начало работы',
+        id: 'faq',
+        title: '✉️・О чём семья в целом?',
         content: `
             <h1>Добро пожаловать</h1>
-            <p>Это минималистичная база знаний, готовая к деплою на GitHub Pages. Она не требует бэкенда или сборки.</p>
+            <p>Вы попали на главную страницу wiki по семье Aristocrat.</p>
             
             <div class="wiki-block-info">
-                <strong>💡 Как это работает:</strong> Весь контент хранится в массиве <code>articles</code> внутри файла <code>script.js</code>. Сайт мгновенно переключает страницы благодаря хэш-роутингу (SPA).
+                <strong>💡 Что из себя представляет семья?</strong> Основной контент семьи направлен на госудаственную основу.
             </div>
 
-            <h2>Как добавить статью?</h2>
-            <p>Откройте <code>script.js</code>, найдите массив <code>articles</code> и добавьте новый объект. Укажите уникальный <code>id</code>, <code>title</code> и <code>content</code> (разрешены HTML-теги).</p>
+            <h2>Основная идея:</h2>
+            <p>Наша идеалогия семьи заключается в поддержке и помощи новичкам которые приходят в государственные структуры на сервере New York. Наша семья предлагает вам участвовать в семейном, государственном контенте.</p>
+            
+            <h2>Важно знать!</h2>
+            <div class="wiki-block-warning">
+                Мы начинающая семья, которая только развивается. По этому большого ажиотажа не ожидайте.
+            </div>
         `
     },
-    {
-        id: 'components',
-        title: 'Компоненты (Info, Warning, Code)',
-        content: `
-            <h1>Готовые компоненты оформления</h1>
-            <p>Вы можете использовать специальные CSS-классы для оформления блоков в ваших статьях.</p>
-            
-            <h2>Блок информации</h2>
-            <div class="wiki-block-info">
-                Используйте класс <code>.wiki-block-info</code> для выделения важных деталей, советов или подсказок.
-            </div>
-
-            <h2>Блок предупреждения</h2>
-            <div class="wiki-block-warning">
-                Используйте класс <code>.wiki-block-warning</code> для критической информации, багов или ограничений.
-            </div>
-
-            <h2>Оформление кода</h2>
-            <p>Оберните ваш код в <code>&lt;div class="wiki-code"&gt;&lt;pre&gt;&lt;code&gt;...&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</code>:</p>
-            <div class="wiki-code">
-<pre><code>// Пример функции
-function initApp() {
-    console.log("Wiki is running!");
-    loadArticle();
-}</code></pre>
-            </div>
-        `
-    }
 ];
 
 // --- ЛОГИКА ПРИЛОЖЕНИЯ ---
@@ -124,4 +101,5 @@ DOM.overlay.addEventListener('click', closeMobileMenu);
 // Инициализация
 renderNavigation();
 loadArticle();
+
 lucide.createIcons(); // Рисуем SVG-иконки
