@@ -39,6 +39,14 @@ const articles = [
             </div>
         </div>
 
+        <div class="cyber-item">
+            <span class="cyber-marker">—</span>
+            <div class="cyber-content">
+                <span class="cyber-label">Дружеское комьюнити:</span>
+                <span class="cyber-desc">У нас нет места токсичности. Мы начинающая семья, и каждый новый участник для нас — ценный друг.</span>
+            </div>
+        </div>
+
     </div>
 </div>
             
@@ -137,6 +145,7 @@ renderNavigation();
 loadArticle();
 
 lucide.createIcons();
+
 
 
 
