@@ -280,5 +280,43 @@ body {
     -webkit-text-fill-color: transparent;
 }
 
+/* Вставь это в конец своего style.css */
+
+/* Настройка скроллбара для левой панели */
+.nav-scroll-area {
+    overflow-y: auto !important;
+    overflow-x: hidden;
+    height: calc(100vh - 300px); /* Высота за вычетом лого и поиска */
+}
+
+.nav-scroll-area::-webkit-scrollbar {
+    width: 4px;
+}
+
+.nav-scroll-area::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.nav-scroll-area::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+/* Заголовки категорий в меню */
+.category-header {
+    padding: 1rem 0.75rem 0.4rem;
+    font-size: 0.7rem;
+    font-weight: 800;
+    color: #52525b; /* Темно-серый для иерархии */
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+/* Активная ссылка в меню */
+.nav-item.active {
+    background: #27272a;
+    color: #ffffff !important;
+    border-left: 2px solid var(--accent-blue);
+}
 
 
