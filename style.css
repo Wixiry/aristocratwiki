@@ -303,67 +303,53 @@ body {
 }
 
 /* ==========================================================================
-   КАТЕГОРИИ 2026 (MAJESTIC RP UI STYLE)
+   КАТЕГОРИИ И НАВИГАЦИЯ 
    ========================================================================== */
 
-/* Основной блок категории */
+/* Заголовок категории (Строгий и минималистичный) */
 .category-header {
-    position: relative;
-    margin: 2rem 0.25rem 0.75rem 0.25rem; /* Увеличенный отступ сверху для разделения блоков */
-    padding: 0.5rem 0.75rem;
-    font-size: 0.7rem;
-    font-weight: 800;
-    color: #ffffff;
+    margin: 1.5rem 0.5rem 0.25rem 0.5rem;
+    padding: 0 0.5rem;
+    font-size: 0.65rem;
+    font-weight: 600;
+    color: #71717a; /* Приглушенный серый для контраста с белым текстом тем */
     text-transform: uppercase;
-    letter-spacing: 0.15em;
+    letter-spacing: 0.1em;
     display: flex;
     align-items: center;
-    
-    /* Кибер-подложка: градиент от синего к прозрачному */
-    background: linear-gradient(90deg, rgba(59, 130, 246, 0.15) 0%, transparent 100%);
-    border-radius: 4px;
-    border-left: 2px solid var(--accent-blue);
-    
-    /* Внутреннее мягкое свечение */
-    box-shadow: inset 10px 0 20px -10px rgba(59, 130, 246, 0.3);
 }
 
-/* Убираем большой отступ у самой первой категории в списке */
+/* Убираем отступ у самой первой категории */
 #nav-links .category-header:first-child {
     margin-top: 0.5rem;
 }
 
-/* Светящийся индикатор (точка) перед текстом */
-.category-header::before {
-    content: '';
-    display: block;
-    width: 6px;
-    height: 6px;
-    background: var(--accent-blue);
-    border-radius: 50%;
-    margin-right: 10px;
-    /* Двойная тень для эффекта LED-диода */
-    box-shadow: 0 0 8px var(--accent-blue), 0 0 4px #ffffff;
-}
-
-/* Высокотехнологичная сканирующая линия после текста */
+/* Тонкая, едва заметная линия-разделитель после текста категории */
 .category-header::after {
     content: '';
     flex-grow: 1;
     height: 1px;
     margin-left: 12px;
-    background: linear-gradient(90deg, rgba(59, 130, 246, 0.6) 0%, transparent 100%);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.06) 0%, transparent 100%);
 }
 
-/* ==========================================================================
-   АКТИВНАЯ ССЫЛКА В СТИЛЕ 2026
-   ========================================================================== */
+/* Базовые стили для элементов списка, чтобы подготовить их к hover/active */
+.nav-item {
+    border-left: 2px solid transparent;
+    margin-bottom: 2px;
+    border-radius: 0 6px 6px 0; /* Прямой срез слева, плавный справа */
+    transition: all 0.2s ease;
+}
+
+/* Активная ссылка (Эффект полупрозрачного стекла и строгая белая рамка) */
 .nav-item.active {
-    background: linear-gradient(90deg, #27272a 0%, transparent 100%);
+    background: rgba(255, 255, 255, 0.06); /* Легкая матовая подложка */
     color: #ffffff !important;
-    border-left: 2px solid var(--accent-blue);
-    /* Добавляем легкое свечение слева для выбранной темы */
-    box-shadow: inset 3px 0 15px -3px rgba(59, 130, 246, 0.4);
+    border-left: 2px solid #ffffff; /* Строгая акцентная линия */
+    box-shadow: none; /* Никакого дешевого неона */
 }
 
-
+/* Hover-эффект для неактивных ссылок */
+.nav-item:hover:not(.active) {
+    background: rgba(255, 255, 255, 0.03);
+}
