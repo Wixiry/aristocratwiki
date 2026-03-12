@@ -52,7 +52,7 @@ const articles = [
     },
     {
         id: 'jobs',
-        category: 'Гос. Структуры',
+        category: 'О Семье',
         title: '👨‍✈️・О работе в государственных структур:',
         content: `
             <h1>Работа в государственных структурах:</h1>
@@ -101,7 +101,7 @@ const articles = [
     },
     {
         id: 'farm',
-        category: 'Контракты',
+        category: 'О Семье',
         title: '🧑‍🌾・О работе по контрактам:',
         content: `
             <h1>Работа по контрактам в семье Aristocrat</h1>
@@ -217,3 +217,4 @@ DOM.overlay.addEventListener('click', () => { DOM.sidebar.classList.add('-transl
 
 renderNavigation();
 loadArticle();
+
