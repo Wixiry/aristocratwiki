@@ -453,23 +453,69 @@ aside img:hover {
     transform: scale(1.02);
 }
 
-/* Цвет звезд розыска */
+/* ==========================================================================
+   УЛУЧШЕННЫЕ АКЦЕНТЫ ДЛЯ ПАМЯТКИ (UAK PREM)
+   ========================================================================== */
+
+/* 1. Звезды розыска: Сделали ярче и добавили неоновый эффект */
 .stars {
-    color: #ffffff;
-    font-size: 0.7rem;
-    margin-left: 8px;
-    letter-spacing: 2px;
-    opacity: 0.6;
+    color: #ffffff !important;
+    font-size: 0.9rem; /* Чуть увеличили размер */
+    margin-left: 15px;
+    letter-spacing: 4px; /* Увеличили расстояние между звездами */
+    font-weight: 900;
+    text-shadow: 
+        0 0 10px rgba(255, 255, 255, 0.5), /* Белое свечение */
+        0 0 20px rgba(255, 255, 255, 0.2);
+    display: inline-block;
+    vertical-align: middle;
 }
 
-/* Заголовки разделов внутри контента */
+/* 2. Заголовки разделов: Теперь это полноценные разделители с фоном */
 .section-title {
-    font-size: 0.8rem;
-    font-weight: 800;
+    font-size: 0.85rem;
+    font-weight: 900;
     color: #ffffff;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
-    margin: 2rem 0 1rem 0;
-    padding-left: 10px;
-    border-left: 2px solid #ffffff;
+    letter-spacing: 0.2em;
+    margin: 3.5rem 0 1.5rem 0; /* Больше отступа сверху для разделения */
+    padding: 10px 15px;
+    border-left: 4px solid #ffffff; /* Утолщенная белая полоса слева */
+    /* Плавный градиент на фоне для "якорного" эффекта */
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.05) 0%, transparent 100%);
+    display: block;
+    width: fit-content;
+    min-width: 300px;
+}
+
+/* 3. Маркеры статей (номера): Сделали более контрастными */
+.cyber-marker {
+    color: #ffffff !important;
+    font-weight: 900;
+    background: rgba(255, 255, 255, 0.1); /* Добавили подложку номеру */
+    padding: 2px 10px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* 4. Заголовки статей внутри блоков */
+.cyber-label {
+    color: #ffffff !important;
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* 5. Дополнительный лоск для описания */
+.cyber-desc {
+    color: #d1d1d6 !important; /* Сделали текст описания чуть светлее */
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.cyber-desc i {
+    color: #a1a1aa !important; /* Цвет примечаний и юрисдикции */
+    border-bottom: 1px dotted rgba(255, 255, 255, 0.2);
 }
