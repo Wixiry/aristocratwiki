@@ -356,70 +356,55 @@ body {
 
 
 /* ==========================================================================
-   WHITE PREMIUM UI 
+   ИСПРАВЛЕНИЕ АКЦЕНТОВ: БЕЛЫЙ ВМЕСТО СИНЕГО
    ========================================================================== */
 
-:root {
-    /* Переопределяем основной акцент на белый */
-    --accent-blue: #ffffff; 
-    --accent-glow: rgba(255, 255, 255, 0.2);
+/* 1. Белое свечение и полоска для открытой темы */
+.nav-item.active {
+    background: rgba(255, 255, 255, 0.05) !important; /* Легкий фон */
+    color: #ffffff !important;
+    border-left: 2px solid #ffffff !important; /* Чистая белая полоса слева */
+    /* Мягкое белое свечение (иннер-тень) */
+    box-shadow: inset 4px 0 15px -5px rgba(255, 255, 255, 0.4) !important;
 }
 
-/* Обновленный заголовок категории */
+/* 2. Белая обводка поиска при клике (Focus) */
+#search:focus {
+    border-color: rgba(255, 255, 255, 0.5) !important;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1) !important;
+    outline: none;
+}
+
+/* 3. Очистка категорий (делаем их строгими в стиле Majestic) */
 .category-header {
-    color: #52525b; /* Оставляем приглушенным, чтобы не спорил с активными пунктами */
-    border-left: 2px solid rgba(255, 255, 255, 0.3); /* Тонкая белая полоска */
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0.03) 0%, transparent 100%);
+    margin-top: 1.5rem;
+    padding: 0 0.5rem;
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: #52525b; /* Zinc 500 */
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    display: flex;
+    align-items: center;
+    background: transparent !important; /* Убираем лишние фоны */
+    border-left: none !important;
+    box-shadow: none !important;
 }
 
 .category-header::after {
+    content: '';
+    flex-grow: 1;
+    height: 1px;
+    margin-left: 10px;
     background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, transparent 100%);
 }
 
-/* Активный пункт меню (Белый акцент) */
-.nav-item.active {
-    background: rgba(255, 255, 255, 0.07) !important;
-    color: #ffffff !important;
-    box-shadow: 
-        0 4px 15px rgba(0, 0, 0, 0.3),
-        inset 0 1px 1px rgba(255, 255, 255, 0.15) !important;
-    border-radius: 6px !important;
+/* Убираем синие точки, если они остались */
+.category-header::before {
+    display: none !important;
 }
 
-/* Индикатор активного пункта */
-.nav-item.active::before {
-    background: #ffffff !important;
-    box-shadow: 0 0 12px rgba(255, 255, 255, 0.5) !important;
-    width: 2px !important;
-}
-
-/* Изменение акцентов в блоках контента (Cyber Blocks) */
-.cyber-marker {
-    color: #ffffff !important;
-    opacity: 0.8;
-}
-
-.cyber-label {
-    color: #ffffff !important;
-    letter-spacing: 0.15em;
-    opacity: 0.9;
-}
-
-/* Блок Инфо теперь тоже в белом стиле */
-.wiki-block-info {
-    background: rgba(255, 255, 255, 0.03) !important;
-    border-left: 4px solid #ffffff !important;
-    color: #e4e4e7 !important;
-}
-
-/* Эффект при наведении на кнопки */
-.nav-item:hover:not(.active) {
-    background: rgba(255, 255, 255, 0.03) !important;
-    color: #ffffff !important;
-}
-
-/* Поиск */
-#search:focus {
-    border-color: rgba(255, 255, 255, 0.4) !important;
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.05) !important;
+/* Стилизация текста внутри активной ссылки */
+.nav-item.active span, .nav-item.active {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
 }
