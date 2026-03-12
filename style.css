@@ -356,55 +356,99 @@ body {
 
 
 /* ==========================================================================
-   ИСПРАВЛЕНИЕ АКЦЕНТОВ: БЕЛЫЙ ВМЕСТО СИНЕГО
+   ADVANCED UI SUPPLEMENT (MAJESTIC 2026 STYLE) - WHITE EDITION
    ========================================================================== */
 
-/* 1. Белое свечение и полоска для открытой темы */
-.nav-item.active {
-    background: rgba(255, 255, 255, 0.05) !important; /* Легкий фон */
-    color: #ffffff !important;
-    border-left: 2px solid #ffffff !important; /* Чистая белая полоса слева */
-    /* Мягкое белое свечение (иннер-тень) */
-    box-shadow: inset 4px 0 15px -5px rgba(255, 255, 255, 0.4) !important;
+/* Контейнер сайдбара для глубины */
+#sidebar {
+    background: linear-gradient(180deg, #121214 0%, #09090b 100%);
+    box-shadow: 10px 0 30px rgba(0, 0, 0, 0.5);
 }
 
-/* 2. Белая обводка поиска при клике (Focus) */
-#search:focus {
-    border-color: rgba(255, 255, 255, 0.5) !important;
-    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1) !important;
-    outline: none;
-}
-
-/* 3. Очистка категорий (делаем их строгими в стиле Majestic) */
+/* Категории: Разделители секций */
 .category-header {
     margin-top: 1.5rem;
-    padding: 0 0.5rem;
+    padding: 0.5rem 1rem;
     font-size: 0.65rem;
-    font-weight: 700;
-    color: #52525b; /* Zinc 500 */
+    font-weight: 800;
+    color: #52525b;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.15em;
     display: flex;
     align-items: center;
-    background: transparent !important; /* Убираем лишние фоны */
-    border-left: none !important;
-    box-shadow: none !important;
+    gap: 10px;
+    opacity: 0.8;
 }
 
 .category-header::after {
-    content: '';
-    flex-grow: 1;
+    content: "";
     height: 1px;
-    margin-left: 10px;
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, transparent 100%);
+    flex-grow: 1;
+    background: linear-gradient(90deg, rgba(63, 63, 70, 0.5) 0%, transparent 100%);
 }
 
-/* Убираем синие точки, если они остались */
-.category-header::before {
-    display: none !important;
+/* Стилизация элементов меню (Ссылок) */
+.nav-item {
+    margin: 0.2rem 0.75rem;
+    padding: 0.6rem 0.75rem !important;
+    border-radius: 8px !important;
+    border-left: none !important;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    display: flex;
+    align-items: center;
+    position: relative;
 }
 
-/* Стилизация текста внутри активной ссылки */
-.nav-item.active span, .nav-item.active {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+/* Эффект при наведении */
+.nav-item:hover:not(.active) {
+    background: rgba(255, 255, 255, 0.03);
+    transform: translateX(4px);
+    color: #ffffff !important;
+}
+
+/* Активное состояние: Стеклянная кнопка */
+.nav-item.active {
+    background: rgba(255, 255, 255, 0.05) !important;
+    color: #ffffff !important;
+    box-shadow: 
+        0 4px 12px rgba(0, 0, 0, 0.2),
+        inset 0 1px 1px rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(4px);
+}
+
+/* ИСПРАВЛЕНО: Белый индикатор активности вместо синего */
+.nav-item.active::before {
+    content: "";
+    position: absolute;
+    left: -4px;
+    width: 3px;
+    height: 16px;
+    background: #ffffff !important; /* Белый цвет */
+    border-radius: 0 4px 4px 0;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5) !important; /* Белое свечение */
+}
+
+/* Дополнительный лоск для поиска */
+#search {
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+}
+
+/* ИСПРАВЛЕНО: Белая обводка поиска при фокусе */
+#search:focus {
+    background: rgba(0, 0, 0, 0.4);
+    border-color: rgba(255, 255, 255, 0.5) !important; /* Белая граница */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.07) !important; /* Белое свечение */
+    outline: none;
+}
+
+/* Оживляем логотип */
+aside img {
+    transition: transform 0.5s ease;
+    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.5));
+}
+
+aside img:hover {
+    transform: scale(1.02);
 }
