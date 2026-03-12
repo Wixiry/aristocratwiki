@@ -7,16 +7,6 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="./style.css">
-    <style>
-        /* Принудительный скроллбар для навигации */
-        .nav-scroll-area {
-            overflow-y: auto !important;
-            max-height: calc(100vh - 350px); /* Оставляем место под фото и поиск */
-        }
-        /* Кастомный вид скролла */
-        .nav-scroll-area::-webkit-scrollbar { width: 4px; }
-        .nav-scroll-area::-webkit-scrollbar-thumb { background: #3f3f46; border-radius: 10px; }
-    </style>
 </head>
 <body class="bg-zinc-950 text-zinc-300 h-screen flex overflow-hidden font-sans">
     
@@ -63,7 +53,6 @@
     <script>
         window.addEventListener('DOMContentLoaded', () => {
             lucide.createIcons();
-            // Если темы все еще не видно, убедись, что в script.js есть массив articles
             if (typeof renderNavigation === 'function') {
                 renderNavigation();
                 loadArticle();
@@ -72,7 +61,3 @@
     </script>
 </body>
 </html>
-
-
-
-
