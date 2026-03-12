@@ -148,16 +148,16 @@ const articles = [
         `
     },
 
-    {
+{
     id: 'uak-memo',
     category: 'Памятки',
     title: '⚖️・Уголовно-Административный Кодекс',
     content: `
-        <h1 class="wiki-title-gradient">Уголовно-Административный Кодекс (УАК)</h1>
+        <h1 class="wiki-title-gradient">Памятка по статьям УАК</h1>
         
         <div class="wiki-block-info">
-            <strong>Справочник для сотрудников ПО, судей и адвокатов.</strong><br>
-            Здесь собраны приоритетные статьи, используемые в ежедневной практике. Классификация по уровню розыска и юрисдикции.
+            Данная памятка содержит перечень наиболее часто встречающихся статей УАК штата Сан-Андреас. 
+            Классификация по юрисдикции и уровню розыска («звездам») для быстрой ориентации в ситуации.
         </div>
 
         <h2 class="section-title">РАЗДЕЛ 1. ПРЕСТУПЛЕНИЯ ПРОТИВ ЛИЧНОСТИ</h2>
@@ -167,41 +167,48 @@ const articles = [
                     <span class="cyber-marker">6.1</span>
                     <div class="cyber-content">
                         <span class="cyber-label">Нанесение тяжких телесных <span class="stars">★★★ / ★★★★</span></span>
-                        <span class="cyber-desc">ч.1: Побои (3 года). ч.2: Особо тяжкие (4 года).<br><i>Юрисдикция: Федеральная/Региональная.</i></span>
+                        <span class="cyber-desc">ч.1: Побои (3 года). ч.2: Умышленное нанесение особо тяжких (4 года).<br><i>Юрисдикция: Федеральная/Региональная.</i></span>
                     </div>
                 </div>
                 <div class="cyber-item">
                     <span class="cyber-marker">6.2</span>
                     <div class="cyber-content">
-                        <span class="cyber-label">Причинение смерти <span class="stars">★★★ / ★★★★</span></span>
-                        <span class="cyber-desc">ч.1: Убийство (4 года). ч.2: По неосторожности (3 года).<br><i>Юрисдикция: Федеральная/Региональная.</i></span>
+                        <span class="cyber-label">Причинение смерти <span class="stars">★★★★ / ★★★</span></span>
+                        <span class="cyber-desc">ч.1: Убийство (4 года). ч.2: По неосторожности или в состоянии аффекта (3 года).<br><i>Юрисдикция: Федеральная/Региональная.</i></span>
                     </div>
                 </div>
                 <div class="cyber-item">
                     <span class="cyber-marker">6.3</span>
                     <div class="cyber-content">
                         <span class="cyber-label">Тяжкое убийство <span class="stars">★★★★★</span></span>
-                        <span class="cyber-desc">Убийство 2+ лиц, при исполнении, с особой жестокостью. (5 лет).<br><i>Юрисдикция: Федеральная/Региональная.</i></span>
+                        <span class="cyber-desc">Убийство 2+ лиц, с особой жестокостью, группой лиц, при исполнении. (5 лет).<br><i>Юрисдикция: Федеральная/Региональная.</i></span>
                     </div>
                 </div>
             </div>
         </div>
 
-        <h2 class="section-title">РАЗДЕЛ 2. ЭКОНОМИЧЕСКИЕ ПРЕСТУПЛЕНИЯ</h2>
+        <h2 class="section-title">РАЗДЕЛ 2. ПРЕСТУПЛЕНИЯ В СФЕРЕ ЭКОНОМИКИ</h2>
         <div class="wiki-block-cyber">
             <div class="cyber-list">
                 <div class="cyber-item">
                     <span class="cyber-marker">10.1</span>
                     <div class="cyber-content">
                         <span class="cyber-label">Кража / Взлом <span class="stars">★★★ / ★★★★</span></span>
-                        <span class="cyber-desc">10.1: Свыше $15,000 (3 года). 10.1.1: Со взломом (4 года).<br><i>Юрисдикция: Региональная/Финансовая.</i></span>
+                        <span class="cyber-desc">10.1: Хищение свыше $15.000 (3 года). 10.1.1: Со взломом хранилища/сейфа (4 года).<br><i>Юрисдикция: Региональная/Финансовая/Федеральная.</i></span>
                     </div>
                 </div>
                 <div class="cyber-item">
                     <span class="cyber-marker">10.4</span>
                     <div class="cyber-content">
-                        <span class="cyber-label">Разбой / Угон <span class="stars">★★★ / ★★★★</span></span>
-                        <span class="cyber-desc">10.4: Разбой с насилием (4 года). 10.5: Угон ТС (3 года).<br><i>Юрисдикция: Федеральная/Региональная.</i></span>
+                        <span class="cyber-label">Разбой <span class="stars">★★★★</span></span>
+                        <span class="cyber-desc">Нападение с насилием, опасным для жизни, или угрозой его применения (4 года).<br><i>Юрисдикция: Федеральная/Региональная.</i></span>
+                    </div>
+                </div>
+                <div class="cyber-item">
+                    <span class="cyber-marker">10.5</span>
+                    <div class="cyber-content">
+                        <span class="cyber-label">Угон ТС <span class="stars">★★★</span></span>
+                        <span class="cyber-desc">Неправомерное завладение автомобилем или иным ТС (3 года).<br><i>Юрисдикция: Федеральная/Региональная.</i></span>
                     </div>
                 </div>
             </div>
@@ -214,27 +221,48 @@ const articles = [
                     <span class="cyber-marker">12.7</span>
                     <div class="cyber-content">
                         <span class="cyber-label">Незаконное проникновение <span class="stars">★★★ / ★★★★</span></span>
-                        <span class="cyber-desc">ч.1: Охраняемый объект (3 года). ч.2: Особо охраняемый (4-5 лет).<br><i>Пример: Форт-Занкудо, Офис FIB.</i></span>
+                        <span class="cyber-desc">ч.1: Охраняемый объект (3 года). ч.2: Особо охраняемый (Форт-Занкудо, офис FIB и др.) (4-5 лет).</span>
                     </div>
                 </div>
                 <div class="cyber-item">
                     <span class="cyber-marker">12.8</span>
                     <div class="cyber-content">
-                        <span class="cyber-label">Оборот оружия и спецсредств <span class="stars">★★★★ / ★★★★★</span></span>
-                        <span class="cyber-desc">12.8: Оружие (4 года или штраф). 12.8.1: Спецсредства ГОС образца (5 лет).<br><i>Примечание: За 12.8.1 штраф не предусмотрен.</i></span>
+                        <span class="cyber-label">Оборот оружия и спецсредств <span class="stars">★★★★</span></span>
+                        <span class="cyber-desc">ч.1: Сбыт/перевозка. ч.2: Хранение/ношение. (4 года или штраф до $20.000).<br><i>Юрисдикция: Федеральная/Региональная.</i></span>
+                    </div>
+                </div>
+                <div class="cyber-item">
+                    <span class="cyber-marker">12.8.1</span>
+                    <div class="cyber-content">
+                        <span class="cyber-label">Спецсредства ГОС образца <span class="stars">★★★★★</span></span>
+                        <span class="cyber-desc">Бронежилеты, тазеры, дубинки с серийными номерами гос. образца (5 лет).<br><b>Важно:</b> Штраф не предусмотрен. Самая «дорогая» статья.</span>
+                    </div>
+                </div>
+                <div class="cyber-item">
+                    <span class="cyber-marker">12.11</span>
+                    <div class="cyber-content">
+                        <span class="cyber-label">Создание НВФ <span class="stars">★★★★★</span></span>
+                        <span class="cyber-desc">Создание, руководство или финансирование незаконного вооруженного формирования (5 лет).<br><i>Юрисдикция: Федеральная.</i></span>
                     </div>
                 </div>
             </div>
         </div>
 
-        <h2 class="section-title">РАЗДЕЛ 4. НАРКОТИЧЕСКИЕ ВЕЩЕСТВА</h2>
+        <h2 class="section-title">РАЗДЕЛ 4. ПРЕСТУПЛЕНИЯ В СФЕРЕ НАРКОТИКОВ</h2>
         <div class="wiki-block-cyber">
             <div class="cyber-list">
                 <div class="cyber-item">
                     <span class="cyber-marker">13.2</span>
                     <div class="cyber-content">
                         <span class="cyber-label">Оборот наркотиков <span class="stars">★★★★ / ★★★★★</span></span>
-                        <span class="cyber-desc">13.2: От 3г (4 года). 13.2.1: Свыше 25г (5 лет).<br>13.4: Для госслужащих — любая доза (5 лет).</span>
+                        <span class="cyber-desc">13.2: От 3г (4 года или штраф $20k). 13.2.1: Особо крупный (свыше 25г) или сбыт (5 лет).<br><i>Примечание: Лицензия KNN разрешает до 5 грамм.</i></span>
+                    </div>
+                </div>
+                <div class="cyber-item">
+                    <span class="cyber-marker">13.4</span>
+                    <div class="cyber-content">
+                        <span class="cyber-label">Наркотики и госслужащие <span class="stars">★★★★★</span></span>
+                        <span class="cyber-desc">Любые действия с наркотиками сотрудниками гос. структур (5 лет).<br><i>Освобождаются только спецотделы (DEA, K-9 и др.) при исполнении.</i></span>
                     </div>
                 </div>
             </div>
@@ -247,20 +275,61 @@ const articles = [
                     <span class="cyber-marker">15.1</span>
                     <div class="cyber-content">
                         <span class="cyber-label">Превышение / Злоупотребление <span class="stars">★★★★ / ★★★★★</span></span>
-                        <span class="cyber-desc">15.1: Выход за пределы (4 года). 15.1.1: Вмешательство в задержание (5 лет).<br>15.4: Взятка (5 лет). 15.6: Халатность (4 года).</span>
+                        <span class="cyber-desc">15.1 ч.1: Выход за пределы полномочий (4 года). ч.2: С насилием или оружием (5 лет).<br>15.1.1: Вмешательство в процесс задержания или ареста (5 лет).</span>
+                    </div>
+                </div>
+                <div class="cyber-item">
+                    <span class="cyber-marker">15.4</span>
+                    <div class="cyber-content">
+                        <span class="cyber-label">Взятка / Халатность <span class="stars">★★★★★ / ★★★★</span></span>
+                        <span class="cyber-desc">15.4: Получение взятки (5 лет). 15.6: Халатность (4 года или штраф $20.000).<br><i>Юрисдикция: Федеральная/Региональная.</i></span>
                     </div>
                 </div>
             </div>
         </div>
 
-        <h2 class="section-title">РАЗДЕЛ 7. АДМИНИСТРАТИВНЫЙ КОДЕКС</h2>
+        <h2 class="section-title">РАЗДЕЛ 6. ПРЕСТУПЛЕНИЯ ПРОТИВ ПРАВОСУДИЯ</h2>
         <div class="wiki-block-cyber">
             <div class="cyber-list">
                 <div class="cyber-item">
-                    <span class="cyber-marker">АДМ</span>
+                    <span class="cyber-marker">16.1</span>
                     <div class="cyber-content">
-                        <span class="cyber-label">Общественный порядок</span>
-                        <span class="cyber-desc">20.1: Хулиганство ($3k-7k). 20.3: Неприемлемый вид ($5k-20k).<br>20.4: Обнажение оружия ($15k-30k + конфискация).</span>
+                        <span class="cyber-label">Воспрепятствование правосудию <span class="stars">★★★★</span></span>
+                        <span class="cyber-desc">ч.4: Неуважение к суду (порядок, неявка) (4-5 лет или штраф $20.000).<br><i>Юрисдикция: Федеральная.</i></span>
+                    </div>
+                </div>
+                <div class="cyber-item">
+                    <span class="cyber-marker">16.4</span>
+                    <div class="cyber-content">
+                        <span class="cyber-label">Незаконное задержание <span class="stars">★★★★★</span></span>
+                        <span class="cyber-desc">Заведомо незаконное заключение или содержание под стражей (5 лет).<br><i>Юрисдикция: Федеральная/Региональная.</i></span>
+                    </div>
+                </div>
+                <div class="cyber-item">
+                    <span class="cyber-marker">16.15</span>
+                    <div class="cyber-content">
+                        <span class="cyber-label">Уклонение от наказания <span class="stars">★...★★★★★</span></span>
+                        <span class="cyber-desc">Уклонение от лишения свободы (10-19 суток КПЗ или 2-5 лет тюрьмы).<br><i>При повинной — наказание сокращается вдвое.</i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="section-title">РАЗДЕЛ 7. АДМИНИСТРАТИВНЫЕ НАРУШЕНИЯ</h2>
+        <div class="wiki-block-cyber">
+            <div class="cyber-list">
+                <div class="cyber-item">
+                    <span class="cyber-marker">20.1</span>
+                    <div class="cyber-content">
+                        <span class="cyber-label">Хулиганство / Внешний вид</span>
+                        <span class="cyber-desc">20.1: Маты, жесты, танцы в ГУ (Штраф $3k-$7k).<br>20.3 ч.1: Нет одежды. ч.2: Алкоголь/Опьянение (Штраф $5k-$20k).</span>
+                    </div>
+                </div>
+                <div class="cyber-item">
+                    <span class="cyber-marker">20.4</span>
+                    <div class="cyber-content">
+                        <span class="cyber-label">Оружие / Имущество / Браконьерство</span>
+                        <span class="cyber-desc">20.4: Обнажение оружия ($15k-$30k + изъятие).<br>21.3: Повреждение имущества по неосторожности ($15k + ущерб).<br>22.1: Охота/рыбалка без лицензии ($5k-$20k + изъятие).</span>
                     </div>
                 </div>
             </div>
@@ -338,5 +407,6 @@ DOM.overlay.addEventListener('click', () => { DOM.sidebar.classList.add('-transl
 
 renderNavigation();
 loadArticle();
+
 
 
