@@ -302,21 +302,68 @@ body {
     border-radius: 10px;
 }
 
-/* Заголовки категорий в меню */
+/* ==========================================================================
+   КАТЕГОРИИ 2026 (MAJESTIC RP UI STYLE)
+   ========================================================================== */
+
+/* Основной блок категории */
 .category-header {
-    padding: 1rem 0.75rem 0.4rem;
+    position: relative;
+    margin: 2rem 0.25rem 0.75rem 0.25rem; /* Увеличенный отступ сверху для разделения блоков */
+    padding: 0.5rem 0.75rem;
     font-size: 0.7rem;
     font-weight: 800;
-    color: #52525b; /* Темно-серый для иерархии */
+    color: #ffffff;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.15em;
+    display: flex;
+    align-items: center;
+    
+    /* Кибер-подложка: градиент от синего к прозрачному */
+    background: linear-gradient(90deg, rgba(59, 130, 246, 0.15) 0%, transparent 100%);
+    border-radius: 4px;
+    border-left: 2px solid var(--accent-blue);
+    
+    /* Внутреннее мягкое свечение */
+    box-shadow: inset 10px 0 20px -10px rgba(59, 130, 246, 0.3);
 }
 
-/* Активная ссылка в меню */
+/* Убираем большой отступ у самой первой категории в списке */
+#nav-links .category-header:first-child {
+    margin-top: 0.5rem;
+}
+
+/* Светящийся индикатор (точка) перед текстом */
+.category-header::before {
+    content: '';
+    display: block;
+    width: 6px;
+    height: 6px;
+    background: var(--accent-blue);
+    border-radius: 50%;
+    margin-right: 10px;
+    /* Двойная тень для эффекта LED-диода */
+    box-shadow: 0 0 8px var(--accent-blue), 0 0 4px #ffffff;
+}
+
+/* Высокотехнологичная сканирующая линия после текста */
+.category-header::after {
+    content: '';
+    flex-grow: 1;
+    height: 1px;
+    margin-left: 12px;
+    background: linear-gradient(90deg, rgba(59, 130, 246, 0.6) 0%, transparent 100%);
+}
+
+/* ==========================================================================
+   АКТИВНАЯ ССЫЛКА В СТИЛЕ 2026
+   ========================================================================== */
 .nav-item.active {
-    background: #27272a;
+    background: linear-gradient(90deg, #27272a 0%, transparent 100%);
     color: #ffffff !important;
     border-left: 2px solid var(--accent-blue);
+    /* Добавляем легкое свечение слева для выбранной темы */
+    box-shadow: inset 3px 0 15px -3px rgba(59, 130, 246, 0.4);
 }
 
 
