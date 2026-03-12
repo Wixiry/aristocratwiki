@@ -452,3 +452,24 @@ aside img {
 aside img:hover {
     transform: scale(1.02);
 }
+
+/* Цвет звезд розыска */
+.stars {
+    color: #ffffff;
+    font-size: 0.7rem;
+    margin-left: 8px;
+    letter-spacing: 2px;
+    opacity: 0.6;
+}
+
+/* Заголовки разделов внутри контента */
+.section-title {
+    font-size: 0.8rem;
+    font-weight: 800;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin: 2rem 0 1rem 0;
+    padding-left: 10px;
+    border-left: 2px solid #ffffff;
+}
